@@ -103,6 +103,31 @@
     display: block !important;
   }
 
+  .owl-nav {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .owl-prev,
+  .owl-next {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 4px #aaa;
+    border-radius: 50%;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
 
   </style>
 
@@ -114,6 +139,7 @@
     <link href="./css/open-iconic-bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
 
     <title>Youtube</title>
   </head>
@@ -365,8 +391,8 @@
               <hr>
               <h6 class ="mb-4"> Recently uploaded <small class="search-icon pl-2">Recommended videos</small></h6>
 
-              <div class = "row pl-2 pr-2">  
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2 pl-1 pr-1">             
+              <div class = "owl-carousel m-auto row pl-2 pr-2">  
+                <div class="item">             
                   <div class="card border-0 bg-light" >
                    <div class = "video-image position-relative">
                     <img class="card-img-top" src="https://i.ytimg.com/vi/rjs0MtXup3U/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA5ybjanCxMza6y8c9zO34ws7eoUQ" alt="Card image cap">
@@ -380,7 +406,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2 pl-1 pr-1">   
+                <div class="item">   
                   <div class="card border-0 bg-light" >
                     <div class = "video-image position-relative">
                     <img class="card-img-top" src="https://i.ytimg.com/vi/BKj2nWJi3w8/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCR1w7YJu0y7PsEi0qpy2dTYc2eUA" alt="Card image cap">
@@ -394,7 +420,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2 pl-1 pr-1">   
+                <div class="item">   
                   <div class="card border-0 bg-light" >
                   <div class = "video-image position-relative">
                     <img class="card-img-top" src="https://i.ytimg.com/vi/_fTANAXHGzA/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBH9DyaL9H329-fYnND2l_JTQ37qg" alt="Card image cap">
@@ -408,7 +434,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-2 pl-1 pr-1">   
+                <div class="item">   
                   <div class="card border-0 bg-light" >
                   <div class = "video-image position-relative">
                     <img class="card-img-top" src="https://i.ytimg.com/vi/Yvzqc9BWEwo/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBRuXnxPqYp_CYlJzJ3ubSnIRIpUw" alt="Card image cap">
@@ -422,7 +448,21 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              
+              <div class="item ">   
+                  <div class="card border-0 bg-light" >
+                  <div class = "video-image position-relative">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/ouCunpo3kdM/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCKx9vhOOWjk6fVPdW2PcVWQx-NOQ" alt="Card image cap">
+                     <div class = "video-duration position-absolute text-white bg-secondary pl-1 pr-1 rounded d-none">
+                      4:53
+                      </div>
+                  </div>
+                    <div class="card-body pl-0 pr-0">
+                      <h5 class="video-title card-title">DIY WATERCOLOR MUG?!|</br>Niki and Gabi DIY or DI-Don't</h5>
+                      <p class="video-info card-text">AwesomenessTV</br>885K views . 3 months ago</p>
+                    </div>
+                  </div>
+                </div>
               
 
 
@@ -444,5 +484,29 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      navText: ['<span class ="oi grey oi-chevron-left" aria-hidden="true"></span>','<span class ="oi grey oi-chevron-right" aria-hidden="true"></span>'],
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:4
+          }
+      }
+  })
+  </script>
+
+    
+
   </body>
 </html>
